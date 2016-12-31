@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="menu_settings">Your String</string>
+    <string name="the_player">X</string>
+	<string name="big_ali">O</string>	
+	<string name="available">"?"</string>
+    <string name="app_name">icacoe</string>
+	<string name="noviceCheckTitle">play novice</string>
+	<string name="resetButtonCaption">reset</string>
+	<string name="quitButtonCaption">quit</string>
+	<string name="copyRight">Developed by Ali Fatolahi - Free</string>
+	<string name="date">Version 1.0 - May 2012</string>
+	<string name="webSite">www.ali-fatolahi.com</string>	
+
+</resources>

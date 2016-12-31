@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+	<TableRow android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+    	<TextView
+    	    android:id="@+id/playCell1"
+    	    style="@style/player"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:layout_weight=".33"
+    	    android:text="@string/available" />
+
+		<TextView style="@style/player"
+			android:id="@+id/playCell2"
+        	android:layout_weight=".33"
+        	android:layout_height="wrap_content"
+        	android:text="@string/available" />
+		<TextView style="@style/player"
+			android:id="@+id/playCell3"
+        	android:layout_weight=".33"
+        	android:layout_height="wrap_content"
+        	android:text="@string/available" />	
+	</TableRow>
+	<TableRow android:layout_width="fill_parent" android:layout_height="fill_parent">
+    	<TextView style="@style/player"
+			android:id="@+id/playCell4"
+        	android:layout_weight=".33"
+        	android:layout_height="wrap_content"
+        	android:text="@string/available" />
+		<TextView style="@style/player"
+        	android:layout_weight=".33"
+			android:id="@+id/playCell5"
+        	android:layout_height="wrap_content"
+        	android:text="@string/available" />
+		<TextView style="@style/player"
+			android:id="@+id/playCell6"
+        	android:layout_weight=".33"
+        	android:layout_height="wrap_content"
+        	android:text="@string/available" />	
+	</TableRow>
+	<TableRow android:layout_width="fill_parent" android:layout_height="fill_parent">
+    	<TextView style="@style/player"
+			android:id="@+id/playCell7"
+        	android:layout_weight=".33"
+        	android:layout_height="wrap_content"
+        	android:text="@string/available" />
+		<TextView style="@style/player"
+			android:id="@+id/playCell8"
+        	android:layout_weight=".33"
+        	android:layout_height="wrap_content"
+        	android:text="@string/available" />
+		<TextView style="@style/player"
+			android:id="@+id/playCell9"
+        	android:layout_weight=".33"
+        	android:layout_height="wrap_content"
+        	android:text="@string/available" />	
+	</TableRow>
+	<TableRow android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<CheckBox android:id="@+id/levelCheck" android:layout_weight=".33" android:layout_height="wrap_content"
+			android:text="@string/noviceCheckTitle" />
+		<Button android:id="@+id/resetButton" android:layout_weight=".33" android:layout_height="wrap_content"
+			android:text="@string/resetButtonCaption" />
+		<Button android:id="@+id/quitButton" android:layout_weight=".33" android:layout_height="wrap_content"
+			android:text="@string/quitButtonCaption" />
+	</TableRow>
+	<TableRow android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<TextView android:layout_height="wrap_content" style="@style/other"
+			android:text="@string/copyRight" android:layout_weight=".33" />
+		<TextView android:layout_height="wrap_content" style="@style/other"
+			android:text="@string/date" android:layout_weight=".33" />
+		<TextView android:layout_height="wrap_content" style="@style/other"
+			android:text="@string/webSite" android:layout_weight=".33" />
+	</TableRow>
+</TableLayout>
