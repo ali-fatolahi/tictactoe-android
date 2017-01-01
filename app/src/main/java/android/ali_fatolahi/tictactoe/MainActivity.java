@@ -2,6 +2,7 @@ package android.ali_fatolahi.tictactoe;
 
 import android.app.*;
 import android.os.*;
+import android.text.method.LinkMovementMethod;
 import android.view.*;
 import android.widget.*;
 import android.view.View.OnClickListener;
@@ -9,10 +10,10 @@ import android.content.DialogInterface;
 
 public class MainActivity extends Activity implements OnClickListener
 {
-    CellView[] playCells=new CellView[9];
-	TicTacToeBoard theBoard=new TicTacToeBoard();
-	Button resetButton,quitButton;
-	CheckBox noviceCheck;
+    private CellView[] playCells=new CellView[9];
+	private TicTacToeBoard theBoard=new TicTacToeBoard();
+	private Button resetButton,quitButton;
+	private CheckBox noviceCheck;
 	
 	/** Called when the activity is first created. */
     @Override
@@ -23,8 +24,6 @@ public class MainActivity extends Activity implements OnClickListener
 		
 		int i=0;
 		for (int id:CellView.CELL_IDS) {
-			//theBoard.getCell(i);
-			//showMessage(TicTacToeBoard.TheBoard.getCell(i).getContent()+"");
 			playCells[i]=new CellView(this, (TextView)findViewById(id), theBoard.getCell(i));
 			i++;
 		}
@@ -36,15 +35,9 @@ public class MainActivity extends Activity implements OnClickListener
 		quitButton.setOnClickListener(this);
 		
 		noviceCheck=(CheckBox)findViewById(R.id.levelCheck);
-		/*while (!TicTacToeBoard.TheBoard.isWinner(Cell.COMPUTER) &&
-			   !TicTacToeBoard.TheBoard.isWinner(Cell.COMPUTER)) {
-				
-		}*/
     }
-	
+
 	public void play() {
-		//showMessage(TicTacToeBoard.TheBoard.isWinner(Cell.HUMAN)+"");
-		//showMessage(theBoard.toString());
 		if (theBoard.isWinner(Cell.HUMAN))
 			showMessage("you won!");
 		else {
@@ -75,11 +68,8 @@ public class MainActivity extends Activity implements OnClickListener
 			}
 		});
 		alertDialog.show();
-		/*Toast toast=new Toast(getApplicationContext());
-		toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();*/
 	}
 
-	//@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
 			case R.id.quitButton:

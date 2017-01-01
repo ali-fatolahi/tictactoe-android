@@ -69,8 +69,8 @@
 		<TextView android:layout_height="wrap_content" style="@style/other"
 			android:text="@string/copyRight" android:layout_weight=".33" />
 		<TextView android:layout_height="wrap_content" style="@style/other"
-			android:text="@string/date" android:layout_weight=".33" />
+			android:text="@string/webSite" android:layout_weight=".33" android:autoLink="web"/>
 		<TextView android:layout_height="wrap_content" style="@style/other"
-			android:text="@string/webSite" android:layout_weight=".33" />
+			android:text="@string/date" android:layout_weight=".33" />
 	</TableRow>
 </TableLayout>

@@ -9,8 +9,8 @@
 	<string name="noviceCheckTitle">play novice</string>
 	<string name="resetButtonCaption">reset</string>
 	<string name="quitButtonCaption">quit</string>
-	<string name="copyRight">Developed by Ali Fatolahi - Free</string>
+	<string name="copyRight">Free - Developed by </string>
 	<string name="date">Version 1.0 - May 2012</string>
-	<string name="webSite">www.ali-fatolahi.com</string>	
+	<string name="webSite"><a href="ca.linkedin.com/pub/ali-fatolahi/17/900/748">Ali Fatolahi</a></string>
 
 </resources>
