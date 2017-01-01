@@ -35,6 +35,9 @@ public class MainActivity extends Activity implements OnClickListener
 		quitButton.setOnClickListener(this);
 		
 		noviceCheck=(CheckBox)findViewById(R.id.levelCheck);
+
+        final TextView webSite = (TextView)findViewById(R.id.webSite);
+        webSite.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
 	public void play() {
