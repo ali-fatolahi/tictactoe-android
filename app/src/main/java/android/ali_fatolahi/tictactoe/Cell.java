@@ -1,21 +1,19 @@
 package android.ali_fatolahi.tictactoe;
 
-public class Cell {
-	private char content='?';
+import static android.ali_fatolahi.tictactoe.Symbol.AVAILABLE;
 
-	public static final char HUMAN='X';
-	public static final char COMPUTER='O';
-	public static final char AVAILABLE='?';
+public class Cell {
+	private Symbol symbol = AVAILABLE;
 
 	public Cell() {
-		content=AVAILABLE;
+		symbol = AVAILABLE;
 	}
 
-	public void setContent(char setContent) {
-		content=setContent;
+	public void setSymbol(final Symbol symbol) {
+		this.symbol = symbol;
 	}
 
-	public char getContent() {
-		return content;
+	public Symbol getSymbol() {
+		return symbol;
 	}
 }

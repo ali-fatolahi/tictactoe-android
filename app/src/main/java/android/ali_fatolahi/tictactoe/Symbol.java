@@ -19,4 +19,9 @@ public enum Symbol {
     public char getContent() {
         return content;
     }
+
+    @Override
+    public String toString() {
+        return Character.toString(content);
+    }
 }

@@ -28,4 +28,18 @@ public class SymbolTest {
             Assert.assertThat(actualContent, is(expectedSymbolContent.get(symbol)));
         }
     }
+
+    @Test
+    public void testSymbolToString() {
+        Map<Symbol, String> expectedSymbolContent = new HashMap(3);
+        expectedSymbolContent.put(AVAILABLE, "?");
+        expectedSymbolContent.put(HUMAN, "X");
+        expectedSymbolContent.put(COMPUTER, "O");
+
+        for (Symbol symbol : Symbol.values()) {
+            String actualContent = symbol.toString();
+
+            Assert.assertThat(actualContent, is(expectedSymbolContent.get(symbol)));
+        }
+    }
 }

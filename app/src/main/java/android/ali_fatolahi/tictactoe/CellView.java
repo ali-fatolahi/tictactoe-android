@@ -4,8 +4,10 @@ import android.view.View;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
 
-public class CellView implements OnClickListener
-{	
+import static android.ali_fatolahi.tictactoe.Symbol.AVAILABLE;
+import static android.ali_fatolahi.tictactoe.Symbol.HUMAN;
+
+public class CellView implements OnClickListener {
 	public static final int[] CELL_IDS={
 		R.id.playCell1,
 		R.id.playCell2,
@@ -29,18 +31,15 @@ public class CellView implements OnClickListener
 		this.textView.setOnClickListener(this);
 	}
 	
-	public void setContent(String newContent) {
-		textView.setText(newContent);
-		cellData.setContent(newContent.charAt(0));
+	public void setContent(final Symbol symbol) {
+		textView.setText(symbol.toString());
+		cellData.setSymbol(symbol);
 	}
-	
-	//@Override
-	public void onClick(View v) {
-	//	TextView tx=(TextView)v;
 
-		if (textView.getText().equals(host.getString(R.string.available))) {
-			textView.setText(R.string.the_player);
-			cellData.setContent(host.getString(R.string.the_player).charAt(0));
+	public void onClick(View v) {
+		if (textView.getText().charAt(0) == AVAILABLE.getContent()) {
+			textView.setText(HUMAN.toString());
+			cellData.setSymbol(HUMAN);
 		}
 		
 		host.play();

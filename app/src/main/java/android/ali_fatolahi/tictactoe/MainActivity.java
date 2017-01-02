@@ -8,6 +8,10 @@ import android.widget.*;
 import android.view.View.OnClickListener;
 import android.content.DialogInterface;
 
+import static android.ali_fatolahi.tictactoe.Symbol.AVAILABLE;
+import static android.ali_fatolahi.tictactoe.Symbol.COMPUTER;
+import static android.ali_fatolahi.tictactoe.Symbol.HUMAN;
+
 public class MainActivity extends Activity implements OnClickListener
 {
     private CellView[] playCells=new CellView[9];
@@ -41,7 +45,7 @@ public class MainActivity extends Activity implements OnClickListener
     }
 
 	public void play() {
-		if (theBoard.isWinner(Cell.HUMAN))
+		if (theBoard.isWinner(HUMAN.getContent()))
 			showMessage("you won!");
 		else {
 			int index=-1;
@@ -52,8 +56,8 @@ public class MainActivity extends Activity implements OnClickListener
 			if (index==-1) {
 				showMessage("draw!");
 			} else {
-				playCells[index].setContent(getString(R.string.big_ali));
-				if (theBoard.isWinner(Cell.COMPUTER))
+				playCells[index].setContent(COMPUTER);
+				if (theBoard.isWinner(COMPUTER.getContent()))
 					showMessage("you lose!");
 			}
 		}
@@ -67,7 +71,7 @@ public class MainActivity extends Activity implements OnClickListener
 		alertDialog.setButton("ok", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface di, int id) {
 				for (int i=0;i<9;++i)
-					playCells[i].setContent(getString(R.string.available));
+					playCells[i].setContent(AVAILABLE);
 			}
 		});
 		alertDialog.show();
@@ -80,7 +84,7 @@ public class MainActivity extends Activity implements OnClickListener
 			break;
 			case R.id.resetButton:
 				for (int i=0;i<9;++i)
-					playCells[i].setContent(getString(R.string.available));
+					playCells[i].setContent(AVAILABLE);
 			break;
 		}
 	}
