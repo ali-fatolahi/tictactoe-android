@@ -1,7 +1,6 @@
 package android.ali_fatolahi.tictactoe;
 
-public class Cell
-{
+public class Cell {
 	private char content='?';
 
 	public static final char HUMAN='X';
